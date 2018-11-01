@@ -1,4 +1,6 @@
-{
+require('dotenv').config()
+
+module.exports = {
   "development": {
     "username": "yubtan",
     "password": null,
@@ -14,10 +16,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
+    "username": process.env.DB_PROD_USERNAME,
+    "password": process.env.DB_PROD_PASSWORD,
+    "database": process.env.DB_PROD_DATABASE,
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": process.env.DB_PROD_DIALECT
   }
 }
