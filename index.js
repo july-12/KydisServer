@@ -17,4 +17,4 @@ app.use(express.urlencoded( { extended: false }))
 app.get('/', (req, res) => res.send('Hello Uyun!'))
 app.use('/api/v1', APIV1)
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+module.exports = app
