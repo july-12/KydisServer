@@ -12,7 +12,7 @@ let myMiddleware = (res, req, next) => {
 app.use(myMiddleware)
 
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded( { extended: false }))
 
 app.get('/', (req, res) => res.send('Hello Uyun!'))
 app.use('/api/v1', APIV1)
