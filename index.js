@@ -1,6 +1,6 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
-const port = 4001
 
 const APIV1 = require('./router/api/v1/index.js')
 

@@ -4,7 +4,7 @@ module.exports = {
   create: async function (req, res) {
     try {
       let { title, content, category_id } = req.body
-      await Post.create({ title, content })
+      await Post.create({ title, content, category_id })
       res.status(200).send({ msg: 'create post successfully'})
     }catch(error) {
       res.status(400).send(error)
